@@ -34,19 +34,7 @@ def calculate_heartrate_range():
                     Payload=json.dumps(payload))
         range = result['Payload'].read()      
         api_response = json.loads(range)               
-        return jsonify(api_response)
-        
-
-@app.route("/terms")
-def terms_and_conditions():
-    "Return terms and conditions"
-    return "This is the terms and conditions document. We are not yet ready with it. Stay tuned!"
-
-@app.route("/privacy")
-def privacy():
-    "Return privacy statement"
-    return "This is the privacy document. We are not yet ready with it. Stay tuned!"
-    
+        return jsonify(api_response)        
 
 #---START OF SCRIPT
 if __name__ == '__main__':
