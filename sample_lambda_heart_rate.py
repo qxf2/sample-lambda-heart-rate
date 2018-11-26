@@ -6,7 +6,7 @@ from flask import Flask, jsonify, render_template, request
 import json
 import boto3
 import logging
-import conf.aws_credentials as conf
+import conf.credentials as conf
 
 # create lambda client
 client = boto3.client('lambda',
@@ -29,7 +29,7 @@ def calculate_heartrate_range():
         age = int(request.form.get('age'))        
         payload = {"age":age} 
         #Invoke a lambda function which calculates the max heart rate and gives the target heart rate range              
-        result = client.invoke(FunctionName='patient_health_record',
+        result = client.invoke(FunctionName=conf.lambda_function_name,
                     InvocationType='RequestResponse',                                      
                     Payload=json.dumps(payload))
         range = result['Payload'].read()      

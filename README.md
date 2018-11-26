@@ -23,8 +23,8 @@ This app will be shortly hosted at pythonanywhere.com
 
 1) Need to have a AWS account with console access.
 2) Clone the repo - https://github.com/qxf2/sample-lambda-heart-rate
-3) Update the conf/aws_credentials.py file with the aws credentials(access_key and secret_key) and region(For eg:- If your region is "Oregion", enter 'us-west-2' in the region field)
-4) Create a AWS Lambda function with name 'patient_health_record' and paste the below code in inline editor. If you are new to AWS Lambda functions, please refer this [link](https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html) and follow the instructions. 
+3) Update the conf/credentials.py file with the aws credentials(access_key and secret_key) and region(For eg:- If your region is "Oregion", enter 'us-west-2' in the region field)
+4) Create a AWS Lambda function with name 'patient_health_record' and paste the below code in inline editor. Update the conf/credentials.py file with the lambda function name details. If you are new to AWS Lambda functions, please refer this [link](https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html) and follow the instructions. 
 
 <pre lang='python'>
 
